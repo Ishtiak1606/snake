@@ -28,6 +28,12 @@ function Snake(){
             this.xSpeed = 0;
             return ;
         }
+        if (this.x < 0){
+            // console.log('Game Over');
+            this.alive = false;
+            this.xSpeed = 0;
+            return ;
+        }
         else {
             for (let i = 0; i < this.tail.length - 1; i++) {
                 this.tail[i] = this.tail[i+1];  
