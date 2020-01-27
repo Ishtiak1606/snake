@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lets play Snake</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px 200px;
+        }
+        .canvas {
+            margin: 0 auto;
+            background-color: #494343;
+            /* border: 5px solid rgb(233, 200, 200); */
+            /* box-shadow:  
+            10px 10px 0 #05bfe0,
+            -10px 10px 0 #05bfe0,
+            10px -10px 0 #05bfe0,
+            -10px -10px 0 #05bfe0;*/
+        }
+        #level {
+            display: inline-flex;
+            outline: none;
+            border: none;
+            color: rgb(14, 130, 207);
+            font-size: .9em;
+            padding: 5px;
+            text-align: center;
+        }
+        p {
+            display: inline-flex;
+        }
+        a {
+            text-decoration: none;
+            font-size: .8em;
+            border: 1px solid #0388b1;
+            color: #01c0ff;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .btn {
+            cursor: pointer;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+            color: #fff;
+            background-color: #3e3e3e;
+            text-align: center;
+            margin: 0;
+            border: none;
+        }
+        .btn:hover {
+            background-color: rgb(25, 184, 212);
+        }
+        .control {
+            width: 150px;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-areas: '. up .' 'left down right';
+            /* grid-template-rows: 2; */
+        }
+        .btn-up {
+            grid-area: up;
+        }
+        .btn-left {
+            grid-area: left;
+        }
+        .btn-down {
+            grid-area: down;
+        }
+        .btn-right {
+            grid-area: right;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+
+        <h2>Let's Play Snake!</h2>
+        <p>Select Difficulty Level : </p>
+        <select name="level" id="level">
+            <option value="500">Easy</option>
+            <option value="250" >Intermediate</option>
+            <option value="150">Hard</option>
+            <option value="75">Pro</option>
+        </select>
+        <a class="btn-play">Play</a>
+    </div>
+    <canvas class="canvas" height="450" width="450" ></canvas>
+    <h3>score: <span id="score">0</span></h3>
+    <div class="control">
+        <div class="btn-up">
+            <button href="" class="btn up">Up</button>
+        </div>
+        <div class="btn-left">
+            <button class="btn left">Left</button>
+        </div>
+        <div class="btn-down">
+            <button class="btn down">Down</button>
+        </div>
+        <div class="btn-right">
+            <button class="btn right">Right</button>
+        </div>
+    </div>
+    <script src="fruit.js"></script>
+    <script src="snake.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
