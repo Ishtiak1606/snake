@@ -28,7 +28,7 @@ function Snake(){
             this.xSpeed = 0;
             return ;
         }
-        if (this.x < 0){
+        else if (this.x < 0){
             // console.log('Game Over');
             this.alive = false;
             this.xSpeed = 0;
