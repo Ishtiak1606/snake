@@ -9,6 +9,7 @@
         body {
             margin: 0;
             padding: 10px;
+            max-width: 600px;
         }
         .canvas {
             margin: 0 auto;
@@ -55,7 +56,8 @@
             background-color: rgb(25, 184, 212);
         }
         .control {
-            width: 150px;
+            width: 250px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 33% 33% 33%;
             grid-template-areas: '. up .' 'left down right';
@@ -90,7 +92,7 @@
         </select>
         <a class="btn-play">Play</a>
     </div>
-    <canvas class="canvas" height="450" width="450" ></canvas>
+    <canvas class="canvas" height="350" width="350" ></canvas>
     <h3>score: <span id="score">0</span></h3>
     <div class="control">
         <div class="btn-up">
