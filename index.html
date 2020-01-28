@@ -7,8 +7,9 @@
     <title>Lets play Snake</title>
     <style>
         body {
-            margin: 0;
+            margin: 0 auto;
             padding: 10px;
+            max-width: 600px;
         }
         .canvas {
             margin: 0 auto;
@@ -43,8 +44,8 @@
         .btn {
             cursor: pointer;
             display: inline-block;
-            width: 50px;
-            height: 25px;
+            width: 80px;
+            height: 40px;
             color: #fff;
             background-color: #3e3e3e;
             text-align: center;
@@ -55,10 +56,11 @@
             background-color: rgb(25, 184, 212);
         }
         .control {
-            width: 150px;
+            width: 250px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 33% 33% 33%;
-            grid-template-areas: '. up .' 'left down right';
+            grid-template-areas: '. up .' 'left . right' '. down .';
             /* grid-template-rows: 2; */
         }
         .btn-up {
@@ -90,7 +92,7 @@
         </select>
         <a class="btn-play">Play</a>
     </div>
-    <canvas class="canvas" height="450" width="450" ></canvas>
+    <canvas class="canvas" height="350" width="350" ></canvas>
     <h3>score: <span id="score">0</span></h3>
     <div class="control">
         <div class="btn-up">
