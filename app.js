@@ -1,6 +1,6 @@
 let canvas = document.querySelector('.canvas');
 let ctx = canvas.getContext('2d');
-let scale = 15;
+let scale = 10;
 let row = canvas.height / scale;
 let column = canvas.width / scale;
 let snake; 
